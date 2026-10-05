@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Portfolio Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     LOGIN SCREEN
+====================================================== -->
+
+<div class="login-screen" id="loginScreen">
+
+    <div class="login-box">
+
+        <div class="login-logo">
+            P
+        </div>
+
+        <h1>Admin Login</h1>
+
+        <p>
+            Manage your portfolio website
+        </p>
+
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter username"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-button"
+            >
+                Sign In
+            </button>
+
+
+            <p
+                class="login-error"
+                id="loginError"
+            ></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADMIN APPLICATION
+====================================================== -->
+
+<div
+    class="admin-app"
+    id="adminApp"
+>
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="admin-logo">
+                P
+            </div>
+
+            <div>
+
+                <strong>
+                    Portfolio
+                </strong>
+
+                <small>
+                    Admin Panel
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <button
+                class="nav-item active"
+                data-section="dashboard"
+            >
+                <span>▦</span>
+                Dashboard
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="profile"
+            >
+                <span>◉</span>
+                Profile
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="about"
+            >
+                <span>◎</span>
+                About
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="skills"
+            >
+                <span>◇</span>
+                Skills
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="projects"
+            >
+                <span>▣</span>
+                Projects
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="education"
+            >
+                <span>▤</span>
+                Education
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="certifications"
+            >
+                <span>✓</span>
+                Certifications
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="contact"
+            >
+                <span>✉</span>
+                Contact
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="social"
+            >
+                <span>↗</span>
+                Social Links
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="index.html"
+                target="_blank"
+                class="view-site"
+            >
+                View Website
+            </a>
+
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu"
+            >
+                ☰
+            </button>
+
+
+            <div>
+
+                <span class="header-label">
+                    Administration
+                </span>
+
+                <h2 id="pageTitle">
+                    Dashboard
+                </h2>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <a
+                    href="index.html"
+                    target="_blank"
+                    class="header-site-button"
+                >
+                    View Site
+                </a>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                class="admin-section active"
+                id="dashboard"
+            >
+
+                <div class="section-intro">
+
+                    <span>
+                        Overview
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your portfolio content
+                        from one place.
+                    </p>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            ◉
+                        </span>
+
+                        <div>
+
+                            <strong
+                                id="statSkills"
+                            >
+                                0
+                            </strong>
+
+                            <p>
+                                Skills
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            ▣
+                        </span>
+
+                        <div>
+
+                            <strong
+                                id="statProjects"
+                            >
+                                0
+                            </strong>
+
+                            <p>
+                                Projects
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            ▤
+                        </span>
+
+                        <div>
+
+                            <strong
+                                id="statEducation"
+                            >
+                                0
+                            </strong>
+
+                            <p>
+                                Education
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span class="stat-icon">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong
+                                id="statCertificates"
+                            >
+                                0
+                            </strong>
+
+                            <p>
+                                Certificates
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    Portfolio
+                                </span>
+
+                                <h3>
+                                    Quick Actions
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions">
+
+                            <button
+                                data-go="profile"
+                            >
+                                Edit Profile
+                            </button>
+
+                            <button
+                                data-go="projects"
+                            >
+                                Manage Projects
+                            </button>
+
+                            <button
+                                data-go="skills"
+                            >
+                                Manage Skills
+                            </button>
+
+                            <a
+                                href="index.html"
+                                target="_blank"
+                            >
+                                Open Website
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    Storage
+                                </span>
+
+                                <h3>
+                                    Local Data
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <p class="storage-text">
+                            Your portfolio content is
+                            currently stored in this
+                            browser using localStorage.
+                        </p>
+
+
+                        <button
+                            class="danger-button"
+                            id="resetData"
+                        >
+                            Reset Portfolio Data
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="profile"
+            >
+
+                <div class="section-intro">
+
+                    <span>
+                        Personal Information
+                    </span>
+
+                    <h1>
+                        Profile
+                    </h1>
+
+                    <p>
+                        Update your main portfolio identity.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="editor-form"
+                    id="profileForm"
+                >
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="profileName"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Professional Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="profileTitle"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Greeting
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileGreeting"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Hero Description
+                        </label>
+
+                        <textarea
+                            id="profileDescription"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Profile Image URL
+                        </label>
+
+                        <input
+                            type="text"
+                            id="profileImage"
+                            placeholder="assets/images/profile.jpg"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Save Profile
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ABOUT
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="about"
+            >
+
+                <div class="section-intro">
+
+                    <span>
+                        Personal Information
+                    </span>
+
+                    <h1>
+                        About
+                    </h1>
+
+                    <p>
+                        Manage your About Me section.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="editor-form"
+                    id="aboutForm"
+                >
+
+                    <div class="form-group">
+
+                        <label>
+                            About Description
+                        </label>
+
+                        <textarea
+                            id="aboutDescription"
+                            rows="7"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="aboutLocation"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="aboutEmail"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Availability
+                        </label>
+
+                        <input
+                            type="text"
+                            id="aboutAvailability"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Save About Information
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SKILLS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="skills"
+            >
+
+                <div class="section-top">
+
+                    <div class="section-intro">
+
+                        <span>
+                            Expertise
+                        </span>
+
+                        <h1>
+                            Skills
+                        </h1>
+
+                        <p>
+                            Add and manage your technical skills.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-button"
+                        id="addSkill"
+                    >
+                        + Add Skill
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-list"
+                    id="skillsList"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PROJECTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="projects"
+            >
+
+                <div class="section-top">
+
+                    <div class="section-intro">
+
+                        <span>
+                            Portfolio
+                        </span>
+
+                        <h1>
+                            Projects
+                        </h1>
+
+                        <p>
+                            Manage projects displayed on your website.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-button"
+                        id="addProject"
+                    >
+                        + Add Project
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-list"
+                    id="projectsList"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 EDUCATION
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="education"
+            >
+
+                <div class="section-top">
+
+                    <div class="section-intro">
+
+                        <span>
+                            Academic Background
+                        </span>
+
+                        <h1>
+                            Education
+                        </h1>
+
+                        <p>
+                            Manage your academic history.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-button"
+                        id="addEducation"
+                    >
+                        + Add Education
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-list"
+                    id="educationList"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CERTIFICATIONS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="certifications"
+            >
+
+                <div class="section-top">
+
+                    <div class="section-intro">
+
+                        <span>
+                            Professional Development
+                        </span>
+
+                        <h1>
+                            Certifications
+                        </h1>
+
+                        <p>
+                            Manage your certificates.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-button"
+                        id="addCertificate"
+                    >
+                        + Add Certificate
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-list"
+                    id="certificatesList"
+                ></div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTACT
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="contact"
+            >
+
+                <div class="section-intro">
+
+                    <span>
+                        Communication
+                    </span>
+
+                    <h1>
+                        Contact
+                    </h1>
+
+                    <p>
+                        Update your contact information.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="editor-form"
+                    id="contactFormAdmin"
+                >
+
+                    <div class="form-group">
+
+                        <label>
+                            Description
+                        </label>
+
+                        <textarea
+                            id="contactDescription"
+                            rows="5"
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactPhone"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="save-button"
+                    >
+                        Save Contact Information
+                    </button>
+
+                </form>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 SOCIAL
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="social"
+            >
+
+                <div class="section-top">
+
+                    <div class="section-intro">
+
+                        <span>
+                            Online Presence
+                        </span>
+
+                        <h1>
+                            Social Links
+                        </h1>
+
+                        <p>
+                            Manage your social media profiles.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="add-button"
+                        id="addSocial"
+                    >
+                        + Add Social Link
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-list"
+                    id="socialList"
+                ></div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

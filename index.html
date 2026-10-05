@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="#home" class="logo" id="siteLogo">
+               Updhul_Savage
+            </a>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certificates</a>
+                <a href="#contact">Contact</a>
+
+                <button id="themeToggle" class="theme-btn">
+                    ◐
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <span class="hero-small" id="heroGreeting">
+                    Hello, I'm
+                </span>
+
+                <h1 id="heroName">
+                    Your Name
+                </h1>
+
+                <h2 id="heroTitle">
+                    Cybersecurity Enthusiast & Software Developer
+                </h2>
+
+                <p id="heroDescription">
+                    I build secure, useful and modern digital solutions
+                    while continuously developing my skills in technology.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn primary-btn">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn secondary-btn">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <div class="profile-wrapper">
+
+                    <img
+                        id="profileImage"
+                        src="assets/images/profile.jpg"
+                        alt="Profile Photo"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="section about" id="about">
+
+            <div class="section-heading">
+
+                <span>About Me</span>
+
+                <h2>Who I Am</h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-text">
+
+                    <p id="aboutDescription">
+                        Welcome to my portfolio. I am passionate about
+                        technology, software development and cybersecurity.
+                    </p>
+
+                </div>
+
+                <div class="about-info">
+
+                    <div class="info-item">
+                        <span>Location</span>
+                        <strong id="aboutLocation">
+                            Ghana
+                        </strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Email</span>
+                        <strong id="aboutEmail">
+                            example@email.com
+                        </strong>
+                    </div>
+
+                    <div class="info-item">
+                        <span>Availability</span>
+                        <strong id="aboutAvailability">
+                            Available
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+        <section class="section" id="skills">
+
+            <div class="section-heading">
+
+                <span>My Expertise</span>
+
+                <h2>Skills</h2>
+
+            </div>
+
+            <div class="skills-grid" id="skillsContainer">
+
+                <!-- JavaScript loads skills here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+        <section class="section projects" id="projects">
+
+            <div class="section-heading">
+
+                <span>My Work</span>
+
+                <h2>Projects</h2>
+
+            </div>
+
+            <div class="projects-grid" id="projectsContainer">
+
+                <!-- JavaScript loads projects here -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+        <section class="section" id="education">
+
+            <div class="section-heading">
+
+                <span>Academic Background</span>
+
+                <h2>Education</h2>
+
+            </div>
+
+            <div class="timeline" id="educationContainer">
+
+                <!-- JavaScript loads education -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CERTIFICATIONS
+        ========================== -->
+        <section class="section" id="certifications">
+
+            <div class="section-heading">
+
+                <span>Professional Development</span>
+
+                <h2>Certifications</h2>
+
+            </div>
+
+            <div
+                class="certifications-grid"
+                id="certificationsContainer"
+            >
+
+                <!-- JavaScript loads certificates -->
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+        <section class="section contact" id="contact">
+
+            <div class="section-heading">
+
+                <span>Get In Touch</span>
+
+                <h2>Contact Me</h2>
+
+            </div>
+
+            <div class="contact-content">
+
+                <div class="contact-info">
+
+                    <h3>Let's work together</h3>
+
+                    <p id="contactDescription">
+                        Have a project, opportunity or question?
+                        Feel free to get in touch.
+                    </p>
+
+                    <div class="contact-item">
+                        <span>Email</span>
+                        <strong id="contactEmail">
+                            example@email.com
+                        </strong>
+                    </div>
+
+                    <div class="contact-item">
+                        <span>Phone</span>
+                        <strong id="contactPhone">
+                            +233 XX XXX XXXX
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <form id="contactForm" class="contact-form">
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="contactSenderEmail"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="contactMessage"
+                        rows="6"
+                        placeholder="Your Message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn primary-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <p>
+            © <span id="footerYear"></span>
+            <span id="footerName">Your Name</span>.
+            All Rights Reserved.
+        </p>
+
+        <div class="social-links" id="socialLinks">
+
+            <!-- JavaScript loads social links -->
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
